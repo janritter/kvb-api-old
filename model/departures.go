@@ -28,7 +28,7 @@ func GetDeparturesByStationID(id int) []typedef.Departure {
 
 			// Build correct time from Sofort and 2 Min
 			arrivalTime := -1
-			if arrivalTimeString == "Sofort" {
+			if strings.TrimSpace(arrivalTimeString) == "Sofort" {
 				arrivalTime = 0
 			} else {
 				arrivalTimeString = strings.Replace(arrivalTimeString, "Min", "", -1)
