@@ -17,19 +17,26 @@ func GetDeparturesForStationHandler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	searchStation := vars["key"]
 
-	name := utils.FindClosestMatchingStation(searchStation)
-
-	response := typedef.DeparturesResponse{
-		Available: true,
-		Station:   name,
-		Response:  model.GetDeparturesByStationID(utils.GetStationIDForName(name)),
-	}
-
-	payload, err := json.Marshal(response)
+	name, err := utils.FindClosestMatchingStation(searchStation)
 	if err != nil {
 		log.Println(err)
-	}
+		w.WriteHeader(404)
+		return
+	} else {
 
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(payload)
+		response := typedef.DeparturesResponse{
+			Available: true,
+			Station:   name,
+			Response:  model.GetDeparturesByStationID(utils.GetStationIDForName(name)),
+		}
+
+		payload, err := json.Marshal(response)
+		if err != nil {
+			log.Println(err)
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(payload)
+
+	}
 }

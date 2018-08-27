@@ -1,10 +1,12 @@
 package utils
 
 import (
+	"errors"
+
 	"github.com/sahilm/fuzzy"
 )
 
-func FindClosestMatchingStation(name string) string {
+func FindClosestMatchingStation(name string) (string, error) {
 	wordsToTest := []string{"Aachener Str./Gürtel",
 		"Adolf-Menzel-Str.",
 		"Adrian-Meller-Str.",
@@ -894,7 +896,13 @@ func FindClosestMatchingStation(name string) string {
 
 	matches := fuzzy.Find(name, wordsToTest)
 
-	return matches[0].Str
+	//Check if a match was found
+	if len(matches) >= 1 {
+		return matches[0].Str, nil
+	}
+
+	return "", errors.New("No Station for given name found")
+
 }
 
 func GetStationIDForName(name string) int {
