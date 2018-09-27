@@ -1,7 +1,6 @@
 package typedef
 
 type DeparturesResponse struct {
-	Timestamp string
 	Available bool
 	Station   string
 	Response  []Departure
