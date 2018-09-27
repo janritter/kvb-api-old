@@ -6,6 +6,8 @@ import (
 	"strconv"
 	"strings"
 
+	"golang.org/x/text/encoding/charmap"
+
 	"github.com/janritter/kvb-api/typedef"
 
 	"github.com/PuerkitoBio/goquery"
@@ -37,6 +39,13 @@ func GetDeparturesByStationID(id int) []typedef.Departure {
 					log.Println("ERROR - Parsing ArrivalTime")
 					log.Println(err)
 				}
+			}
+
+			// Response is ISO-8859-1, transfer to utf-8
+			direction, err = charmap.ISO8859_1.NewDecoder().String(direction)
+
+			if err != nil {
+				log.Println(err)
 			}
 
 			singleDeparture := typedef.Departure{
