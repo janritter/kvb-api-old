@@ -7,10 +7,13 @@ import (
 
 	"github.com/gorilla/mux"
 
+	"github.com/janritter/kvb-api/config"
 	"github.com/janritter/kvb-api/controller"
 )
 
 func main() {
+
+	config.Init()
 
 	r := mux.NewRouter()
 

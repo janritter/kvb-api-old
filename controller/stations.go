@@ -22,21 +22,20 @@ func GetDeparturesForStationHandler(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 		w.WriteHeader(404)
 		return
-	} else {
-
-		response := typedef.DeparturesResponse{
-			Available: true,
-			Station:   name,
-			Response:  model.GetDeparturesByStationID(utils.GetStationIDForName(name)),
-		}
-
-		payload, err := json.Marshal(response)
-		if err != nil {
-			log.Println(err)
-		}
-
-		w.Header().Set("Content-Type", "application/json")
-		w.Write(payload)
-
 	}
+
+	response := typedef.DeparturesResponse{
+		Available: true,
+		Station:   name,
+		Response:  model.GetDeparturesByStationID(utils.GetStationIDForName(name)),
+	}
+
+	payload, err := json.Marshal(response)
+	if err != nil {
+		utils.LogError(err, map[string]string{"module": "controller/stations"})
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(payload)
+
 }

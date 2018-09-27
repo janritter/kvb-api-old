@@ -14,6 +14,18 @@
   version = "v1.0.0"
 
 [[projects]]
+  name = "github.com/certifi/gocertifi"
+  packages = ["."]
+  revision = "deb3ae2ef2610fde3330947281941c562861188b"
+  version = "2018.01.18"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/getsentry/raven-go"
+  packages = ["."]
+  revision = "084a9de9eb0361fbd5ded14b55c84e5493a5d7f6"
+
+[[projects]]
   name = "github.com/gorilla/context"
   packages = ["."]
   revision = "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
@@ -26,6 +38,12 @@
   version = "v1.6.2"
 
 [[projects]]
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
+
+[[projects]]
   name = "github.com/sahilm/fuzzy"
   packages = ["."]
   revision = "0ca8ec0fccc8cd7d336a6d6dec490a327a8d5cb0"
@@ -36,8 +54,7 @@
   name = "golang.org/x/net"
   packages = [
     "html",
-    "html/atom",
-    "html/charset"
+    "html/atom"
   ]
   revision = "4dfa2610cdf3b287375bbba5b8f2a14d3b01d8de"
 
@@ -46,19 +63,9 @@
   packages = [
     "encoding",
     "encoding/charmap",
-    "encoding/htmlindex",
     "encoding/internal",
     "encoding/internal/identifier",
-    "encoding/japanese",
-    "encoding/korean",
-    "encoding/simplifiedchinese",
-    "encoding/traditionalchinese",
-    "encoding/unicode",
     "internal/gen",
-    "internal/tag",
-    "internal/utf8internal",
-    "language",
-    "runes",
     "transform",
     "unicode/cldr"
   ]
@@ -68,6 +75,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "468f73860a93260ab0f78800822029fed02b8ea6b377d6219c158631904211cf"
+  inputs-digest = "1ff8fa7abeb0cfeece82b08cae596a4e53848a27689da567b1fd5048fc6ec173"
   solver-name = "gps-cdcl"
   solver-version = 1

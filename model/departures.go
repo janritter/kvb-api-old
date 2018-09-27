@@ -2,13 +2,13 @@ package model
 
 import (
 	"fmt"
-	"log"
 	"strconv"
 	"strings"
 
 	"golang.org/x/text/encoding/charmap"
 
 	"github.com/janritter/kvb-api/typedef"
+	"github.com/janritter/kvb-api/utils"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -17,7 +17,8 @@ func GetDeparturesByStationID(id int) []typedef.Departure {
 
 	doc, err := goquery.NewDocument(fmt.Sprintf("https://www.kvb.koeln/generated/?aktion=show&code=%d", id))
 	if err != nil {
-		log.Fatal(err)
+		utils.LogError(err, map[string]string{"module": "model/departures"})
+		return nil
 	}
 
 	departures := []typedef.Departure{}
@@ -36,16 +37,14 @@ func GetDeparturesByStationID(id int) []typedef.Departure {
 				arrivalTimeString = strings.Replace(arrivalTimeString, "Min", "", -1)
 				arrivalTime, err = strconv.Atoi(strings.TrimSpace(arrivalTimeString))
 				if err != nil {
-					log.Println("ERROR - Parsing ArrivalTime")
-					log.Println(err)
+					utils.LogError(err, map[string]string{"module": "model/departures"})
 				}
 			}
 
 			// Response is ISO-8859-1, transfer to utf-8
 			direction, err = charmap.ISO8859_1.NewDecoder().String(direction)
-
 			if err != nil {
-				log.Println(err)
+				utils.LogError(err, map[string]string{"module": "model/departures"})
 			}
 
 			singleDeparture := typedef.Departure{
