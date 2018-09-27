@@ -74,6 +74,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Bachemer Str.",
 		"Bachstelzenweg",
 		"Bad Godesb. Bf/Löbestr.",
+		"Bad Godesb. Bahnhof/Löbestr.",
 		"Badorf",
 		"Bahnstr.",
 		"Baldurstr.",
@@ -96,11 +97,20 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Beuelsweg Nord",
 		"Beuthener Str.",
 		"Bevingsweg",
-		"Bf Deutz/LANXESS arena", "Bf Deutz/Messe", "Bf Deutz/Messeplatz",
+		"Bf Deutz/LANXESS arena",
+		"Bahnhof Deutz/LANXESS arena",
+		"Bf Deutz/Messe",
+		"Bahnhof Deutz/Messe",
+		"Bf Deutz/Messeplatz",
+		"Bahnhof Deutz/Messeplatz",
 		"Bf Ehrenfeld",
+		"Bahnhof Ehrenfeld",
 		"Bf Lövenich",
+		"Bahnhof Lövenich",
 		"Bf Mülheim",
+		"Bahnhof Mülheim",
 		"Bf Porz",
+		"Bahnhof Porz",
 		"Bieselweg",
 		"Birkenallee",
 		"Birkenweg",
@@ -127,7 +137,9 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Brahmsstr.",
 		"Braugasse",
 		"Bremerhavener Str.",
-		"Breslauer Platz/Hbf", "Broichstr.",
+		"Breslauer Platz/Hbf",
+		"Breslauer Platz/Hauptbahnhof",
+		"Broichstr.",
 		"Bruder-Klaus-Siedlung",
 		"Brück Mauspfad",
 		"Brüggener Str.", "Brühl Mitte",
@@ -166,6 +178,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Curt-Stenvert-Bogen",
 		"Cäsarstr.", "CöllnParc",
 		"Dasselstr./Bf Süd", "Deckstein",
+		"Dasselstr./Bahnhof Süd", "Deckstein",
 		"Dellbrück Hauptstr.",
 		"Dellbrück Mauspfad",
 		"Dellbrück S-Bahn",
@@ -178,7 +191,9 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Dionysstr.",
 		"DLR",
 		"Dohmengasse",
-		"Dom/Hbf", "Donatusstr.",
+		"Dom/Hbf",
+		"Dom/Hauptbahnhof",
+		"Donatusstr.",
 		"Dornstr.",
 		"Dorotheenstraße",
 		"Dr.-Schultz-Str.",
@@ -247,6 +262,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Frankstr.",
 		"Franziska-Anneke-Str.",
 		"Frechen Bf",
+		"Frechen Bahnhof",
 		"Frechen Kirche",
 		"Frechen Rathaus",
 		"Frechen-Benzelrath",
@@ -282,6 +298,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Glashüttenstr.",
 		"Gleueler Str./Gürtel",
 		"Godorf Bf",
+		"Godorf Bahnhof",
 		"Goldammerweg",
 		"Goldregenweg",
 		"Goltsteinstr./Gürtel", "Gottesweg", "Grachtenhofstr.",
@@ -314,7 +331,9 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Hahnwaldweg",
 		"Halfengasse",
 		"Hammerschmidtstr.",
-		"Hans-Böckler-Platz/Bf West", "Hans-Offermann-Str.",
+		"Hans-Böckler-Platz/Bf West",
+		"Hans-Böckler-Platz/Bahnhof West",
+		"Hans-Offermann-Str.",
 		"Hansaring", "Hansestr.",
 		"Hansestr. Ost",
 		"Hansestr. Süd",
@@ -350,6 +369,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Hücheln Krankenhaus",
 		"Hüchelner Str.",
 		"Hürth Kalscheuren Bf",
+		"Hürth Kalscheuren Bahnhof",
 		"Hürth-Hermülheim",
 		"Häuschensweg",
 		"Höhenberg Frankfurter Str.",
@@ -645,6 +665,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Robert-Perthel-Str.",
 		"Robert-Schuman-Platz",
 		"Rodenkirchen Bf",
+		"Rodenkirchen Bahnhof",
 		"Rodenkirchen Bismarckstr.",
 		"Rodenkirchen Rathaus",
 		"Rodenkirchener Str.",
@@ -698,6 +719,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Siebengebirgsallee",
 		"Siedlung Mielenforst",
 		"Siegburg Bf",
+		"Siegburg Bahnhof",
 		"Siegburg Brückberg",
 		"Siegburg Ernststr.",
 		"Siegburg Friedrich-Ebert-Str.",
@@ -760,6 +782,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Sülzburgstr./Berrenrather Str.",
 		"Sülzgürtel",
 		"Sürth Bf",
+		"Sürth Bahnhof",
 		"Tacitusstr.", "Takustr.",
 		"Talweg",
 		"Tannenbusch Mitte",
@@ -778,6 +801,7 @@ func FindClosestMatchingStation(name string) (string, error) {
 		"Troisdorf Altenforst",
 		"Troisdorf Bergeracker",
 		"Troisdorf BF",
+		"Troisdorf Bahnhof",
 		"Troisdorf Elsenplatz",
 		"Troisdorf Kuttgasse",
 		"Troisdorf Rathaus",
@@ -979,6 +1003,7 @@ func GetStationIDForName(name string) int {
 	m["Bachemer Str."] = 866
 	m["Bachstelzenweg"] = 287
 	m["Bad Godesb. Bf/Löbestr."] = 161
+	m["Bad Godesb. Bahnhof/Löbestr."] = 161
 	m["Badorf"] = 737
 	m["Bahnstr."] = 830
 	m["Baldurstr."] = 561
@@ -1012,6 +1037,13 @@ func GetStationIDForName(name string) int {
 	m["Bf Lövenich"] = 212
 	m["Bf Mülheim"] = 572
 	m["Bf Porz"] = 468
+	m["Bahnhof Deutz/LANXESS arena"] = 49
+	m["Bahnhof Deutz/Messe"] = 41
+	m["Bahnhof Deutz/Messeplatz"] = 257
+	m["Bahnhof Ehrenfeld"] = 835
+	m["Bahnhof Lövenich"] = 212
+	m["Bahnhof Mülheim"] = 572
+	m["Bahnhof Porz"] = 468
 	m["Bieselweg"] = 500
 	m["Birkenallee"] = 203
 	m["Birkenweg"] = 614
@@ -1043,6 +1075,7 @@ func GetStationIDForName(name string) int {
 	m["Braugasse"] = 220
 	m["Bremerhavener Str."] = 365
 	m["Breslauer Platz/Hbf"] = 9
+	m["Breslauer Platz/Hauptbahnhof"] = 9
 	m["Broichstr."] = 541
 	m["Bruder-Klaus-Siedlung"] = 638
 	m["Brück Mauspfad"] = 547
@@ -1088,6 +1121,7 @@ func GetStationIDForName(name string) int {
 	m["Cäsarstr."] = 70
 	m["CöllnParc"] = 900
 	m["Dasselstr./Bf Süd"] = 25
+	m["Dasselstr./Bahnhof Süd"] = 25
 	m["Deckstein"] = 177
 	m["Dellbrück Hauptstr."] = 595
 	m["Dellbrück Mauspfad"] = 594
@@ -1181,6 +1215,7 @@ func GetStationIDForName(name string) int {
 	m["Frankstr."] = 110
 	m["Franziska-Anneke-Str."] = 849
 	m["Frechen Bf"] = 712
+	m["Frechen Bahnhof"] = 712
 	m["Frechen Kirche"] = 711
 	m["Frechen Rathaus"] = 710
 	m["Frechen-Benzelrath"] = 708
@@ -1218,6 +1253,7 @@ func GetStationIDForName(name string) int {
 	m["Glashüttenstr."] = 862
 	m["Gleueler Str./Gürtel"] = 173
 	m["Godorf Bf"] = 134
+	m["Godorf Bahnhof"] = 134
 	m["Goldammerweg"] = 288
 	m["Goldregenweg"] = 629
 	m["Goltsteinstr./Gürtel"] = 78
@@ -1254,6 +1290,7 @@ func GetStationIDForName(name string) int {
 	m["Halfengasse"] = 350
 	m["Hammerschmidtstr."] = 129
 	m["Hans-Böckler-Platz/Bf West"] = 31
+	m["Hans-Böckler-Platz/Bahnhof West"] = 31
 	m["Hans-Offermann-Str."] = 938
 	m["Hansaring"] = 36
 	m["Hansestr."] = 455
@@ -1295,6 +1332,7 @@ func GetStationIDForName(name string) int {
 	m["Hücheln Krankenhaus"] = 707
 	m["Hüchelner Str."] = 718
 	m["Hürth Kalscheuren Bf"] = 5447
+	m["Hürth Kalscheuren Bahnhof"] = 5447
 	m["Hürth-Hermülheim"] = 733
 	m["Häuschensweg"] = 266
 	m["Höhenberg Frankfurter Str."] = 518
@@ -1620,6 +1658,7 @@ func GetStationIDForName(name string) int {
 	m["Robert-Perthel-Str."] = 334
 	m["Robert-Schuman-Platz"] = 1655
 	m["Rodenkirchen Bf"] = 106
+	m["Rodenkirchen Bahnhof"] = 106
 	m["Rodenkirchen Bismarckstr."] = 780
 	m["Rodenkirchen Rathaus"] = 111
 	m["Rodenkirchener Str."] = 9338
@@ -1683,6 +1722,7 @@ func GetStationIDForName(name string) int {
 	m["Siebengebirgsallee"] = 168
 	m["Siedlung Mielenforst"] = 599
 	m["Siegburg Bf"] = 1811
+	m["Siegburg Bahnhof"] = 1811
 	m["Siegburg Brückberg"] = 2099
 	m["Siegburg Ernststr."] = 2100
 	m["Siegburg Friedrich-Ebert-Str."] = 7699
@@ -1747,6 +1787,7 @@ func GetStationIDForName(name string) int {
 	m["Sülzburgstr./Berrenrather Str."] = 157
 	m["Sülzgürtel"] = 160
 	m["Sürth Bf"] = 124
+	m["Sürth Bahnhof"] = 124
 	m["Tacitusstr."] = 68
 	m["Takustr."] = 836
 	m["Talweg"] = 805
@@ -1766,6 +1807,7 @@ func GetStationIDForName(name string) int {
 	m["Troisdorf Altenforst"] = 2083
 	m["Troisdorf Bergeracker"] = 2069
 	m["Troisdorf BF"] = 2071
+	m["Troisdorf Bahnhof"] = 2071
 	m["Troisdorf Elsenplatz"] = 2078
 	m["Troisdorf Kuttgasse"] = 2664
 	m["Troisdorf Rathaus"] = 2041
