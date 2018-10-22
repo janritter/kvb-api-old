@@ -2,63 +2,82 @@
 
 
 [[projects]]
+  digest = "1:a62f6ed230a8cd138a9efbe718e7d0b0294f139266f5f55cd942769a9aac8de2"
   name = "github.com/PuerkitoBio/goquery"
   packages = ["."]
+  pruneopts = "UT"
   revision = "dc2ec5c7ca4d9aae063b79b9f581dd3ea6afd2b2"
   version = "v1.4.1"
 
 [[projects]]
+  digest = "1:66b3310cf22cdc96c35ef84ede4f7b9b370971c4025f394c89a2638729653b11"
   name = "github.com/andybalholm/cascadia"
   packages = ["."]
+  pruneopts = "UT"
   revision = "901648c87902174f774fac311d7f176f8647bdaa"
   version = "v1.0.0"
 
 [[projects]]
+  digest = "1:fed1f537c2f1269fe475a8556c393fe466641682d73ef8fd0491cd3aa1e47bad"
   name = "github.com/certifi/gocertifi"
   packages = ["."]
+  pruneopts = "UT"
   revision = "deb3ae2ef2610fde3330947281941c562861188b"
   version = "2018.01.18"
 
 [[projects]]
   branch = "master"
+  digest = "1:39d976dc7e048eb1d485ef540cb1148ce033d6430666b9dc71381e8d4620fecf"
   name = "github.com/getsentry/raven-go"
   packages = ["."]
-  revision = "084a9de9eb0361fbd5ded14b55c84e5493a5d7f6"
+  pruneopts = "UT"
+  revision = "d1aab6ee63f4a2cca2169c538eceba058cb976b7"
 
 [[projects]]
+  digest = "1:c79fb010be38a59d657c48c6ba1d003a8aa651fa56b579d959d74573b7dff8e1"
   name = "github.com/gorilla/context"
   packages = ["."]
+  pruneopts = "UT"
   revision = "08b5f424b9271eedf6f9f0ce86cb9396ed337a42"
   version = "v1.1.1"
 
 [[projects]]
+  digest = "1:e73f5b0152105f18bc131fba127d9949305c8693f8a762588a82a48f61756f5f"
   name = "github.com/gorilla/mux"
   packages = ["."]
+  pruneopts = "UT"
   revision = "e3702bed27f0d39777b0b37b664b6280e8ef8fbf"
   version = "v1.6.2"
 
 [[projects]]
+  digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
   name = "github.com/pkg/errors"
   packages = ["."]
+  pruneopts = "UT"
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
   version = "v0.8.0"
 
 [[projects]]
+  digest = "1:56ce664abce576b1e6e3673303a5eef8ef57d3f261c2d658f6f0313ecb17ac1f"
   name = "github.com/sahilm/fuzzy"
   packages = ["."]
+  pruneopts = "UT"
   revision = "0ca8ec0fccc8cd7d336a6d6dec490a327a8d5cb0"
   version = "v0.1.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:a367927017e67fb73acff1959106cb512b13fcec1a1f394a4dbf9dfb9a78b5b6"
   name = "golang.org/x/net"
   packages = [
     "html",
-    "html/atom"
+    "html/atom",
   ]
+  pruneopts = "UT"
   revision = "4dfa2610cdf3b287375bbba5b8f2a14d3b01d8de"
 
 [[projects]]
+  digest = "1:e2e7f5211c3327ff52e02773e4fd477842b2fed07ead33ec342970de162610ac"
   name = "golang.org/x/text"
   packages = [
     "encoding",
@@ -67,14 +86,32 @@
     "encoding/internal/identifier",
     "internal/gen",
     "transform",
-    "unicode/cldr"
+    "unicode/cldr",
   ]
+  pruneopts = "UT"
   revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
   version = "v0.3.0"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "1ff8fa7abeb0cfeece82b08cae596a4e53848a27689da567b1fd5048fc6ec173"
+  input-imports = [
+    "github.com/PuerkitoBio/goquery",
+    "github.com/andybalholm/cascadia",
+    "github.com/certifi/gocertifi",
+    "github.com/getsentry/raven-go",
+    "github.com/gorilla/context",
+    "github.com/gorilla/mux",
+    "github.com/pkg/errors",
+    "github.com/sahilm/fuzzy",
+    "golang.org/x/net/html",
+    "golang.org/x/net/html/atom",
+    "golang.org/x/text/encoding",
+    "golang.org/x/text/encoding/charmap",
+    "golang.org/x/text/encoding/internal",
+    "golang.org/x/text/encoding/internal/identifier",
+    "golang.org/x/text/transform",
+    "golang.org/x/text/unicode/cldr",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
